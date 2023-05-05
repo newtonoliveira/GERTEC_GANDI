@@ -1,0 +1,71 @@
+unit gertec.gandi_gp700x;
+
+interface
+
+uses
+  System.SysUtils,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Graphics,
+  FMX.Dialogs,
+  gertec.lib.gandi,
+  System.Threading,
+  FMX.Helpers.Android,
+  FMX.Surfaces,
+  FMX.FontGlyphs,
+  Androidapi.JNI.GraphicsContentViewText,
+  System.IOUtils,
+  Androidapi.Helpers,
+  Androidapi.JNI.App,
+  Androidapi.JNIBridge,
+  Androidapi.JNI.JavaTypes;
+
+type
+  TGandiPOS = class
+  private
+    iGandi: JIGandi;
+  public
+    procedure HabilitaLauncher(AHabilita: boolean);
+    procedure HabilitaLOGADB(AHabilita: boolean);
+
+    function QualNivelDaBateria: Integer;
+
+
+  end;
+
+var
+  GandiPOS: TGandiPOS;
+  aTask: ITask;
+
+implementation
+
+{ TGandiPOS }
+
+procedure TGandiPOS.HabilitaLauncher(AHabilita: boolean);
+begin
+  GandiPOS.iGandi.LauncherEnabled(AHabilita);
+end;
+
+procedure TGandiPOS.HabilitaLOGADB(AHabilita: boolean);
+begin
+  GandiPOS.iGandi.AdbLogEnabled(AHabilita);
+end;
+
+function TGandiPOS.QualNivelDaBateria: Integer;
+begin
+  result := GandiPOS.iGandi.GetBatteryLevel().intValue;
+end;
+
+initialization
+
+GandiPOS := TGandiPOS.Create();
+
+aTask := TTask.Create(
+  procedure()
+  begin
+    GandiPOS.iGandi := TJGandi.JavaClass.getInstance(TAndroidHelper.Activity);
+  end);
+aTask.Start;
+
+end.

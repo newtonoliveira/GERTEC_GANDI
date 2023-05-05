@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2023/05/05 16:25:58.817,=C:\Users\pinpag\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2023/05/05 16:26:39.809,D:\repos\GANDI\src\uMain.pas=C:\Users\pinpag\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2023/05/05 16:26:39.809,D:\repos\GANDI\src\uMain.fmx=C:\Users\pinpag\Documents\Embarcadero\Studio\Projects\Unit4.fmx</Transaction>
+    <Transaction>2023/05/05 16:26:46.950,D:\repos\GANDI\src\gandi.dproj=C:\Users\pinpag\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
+    <Transaction>2023/05/05 16:33:19.674,=D:\repos\GANDI\src\gertec\lib\libgandi-release-1.2.10.jar</Transaction>
+    <Transaction>2023/05/05 16:33:33.778,=D:\repos\GANDI\src\gertec\GandiPOS.pas</Transaction>
+    <Transaction>2023/05/05 16:33:33.815,=D:\repos\GANDI\src\gertec\libgandi.pas</Transaction>
+    <Transaction>2023/05/05 16:48:44.376,=D:\repos\GANDI\src\gertec\gertec.gandi_gp700x.pas</Transaction>
+    <Transaction>2023/05/05 16:48:51.402,=D:\repos\GANDI\src\gertec\lib\gertec.lib.gandi.pas</Transaction>
+  </Transactions>
+  <ActiveMobileDevice>   <NoProfile Android64="0123abcd" Android="0123abcd"/>
+  </ActiveMobileDevice>
+</BorlandProject>
